@@ -58,7 +58,13 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    task wrapper(type: Wrapper) {
+        gradleVersion = '4.1'
+    }
 }
+
+
 
 flutter {
     source '../..'
