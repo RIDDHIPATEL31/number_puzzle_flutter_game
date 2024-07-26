@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:slide_puzzle/ui/icons/stopwatch.dart';
 import 'package:slide_puzzle/ui/screen/game/utils/format.dart';
@@ -97,10 +98,10 @@ class _GameStopwatchWidgetState extends State<GameStopwatchWidget>
         );
       },
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SizedBox(
-            width: 250,
+            width: 200,
             child: Text(
               timeStr,
               style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -110,10 +111,13 @@ class _GameStopwatchWidgetState extends State<GameStopwatchWidget>
             ),
           ),
           // const SizedBox(width: 16.0),
-          StopwatchIcon(
-            size: 24,
-            millis: time,
-            color: Theme.of(context).iconTheme.color ?? Colors.grey,
+          Visibility(
+            visible: false,
+            child: StopwatchIcon(
+              size: 24,
+              millis: time,
+              color: Theme.of(context).iconTheme.color ?? Colors.grey,
+            ),
           ),
         ],
       ),

@@ -41,14 +41,14 @@ class GameScreen extends StatelessWidget {
     final fabWidget = _buildFab(context);
     final boardWidget = _buildBoard(context);
     return OrientationBuilder(builder: (context, orientation) {
-      final statusWidget = Column(
+      final statusWidget = Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           GameStopwatchWidget(
             time: presenter.time,
             fontSize: orientation == Orientation.landscape && !isLargeScreen
-                ? 50.0
-                : 65.0,
+                ? 30.0
+                : 35.0,
           ),
           Text(
             '${presenter.steps ?? -1} steps',
