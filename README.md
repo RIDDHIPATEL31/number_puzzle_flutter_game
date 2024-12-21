@@ -4,7 +4,9 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+The sliding puzzle game is a classic puzzle game that has been around for centuries. The
+game involves sliding numbered tiles in a grid to put them in order. The goal of the
+game is to solve the puzzle by moving all of the tiles to their correct positions.
 
 A few resources to get you started if this is your first Flutter project:
 
